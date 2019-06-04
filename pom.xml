@@ -113,7 +113,7 @@
 						<driver>com.mysql.jdbc.Driver</driver>
 						<url>jdbc:mysql://localhost:3306/milk</url>
 						<username>root</username>
-						<password>root</password>
+						<password></password>
 					</jdbc>
 					<generator>
 						<database>
@@ -130,7 +130,7 @@
 						</generate>
 						<target>
 							<packageName>com.db</packageName>
-							<directory>/src/main/java/</directory>
+							<directory>/target/generated-sources/</directory>
 						</target>
 					</generator>
 				</configuration>

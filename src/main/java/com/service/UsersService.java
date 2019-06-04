@@ -1,39 +1,40 @@
 package com.service;
 
 
-import com.db.tables.daos.UsersDao;
-import com.db.tables.pojos.Users;
+
+import com.db.tables.daos.MUsersDao;
+import com.db.tables.pojos.MUsers;
 import org.jooq.DSLContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-import static com.db.tables.Users.*;
+import static com.db.Tables.M_USERS;
 
 
 @Service
 public class UsersService {
 
     private DSLContext dslContext;
-    private UsersDao usersDao;
+    private MUsersDao mUsersDao;
 
     @Autowired
-    public UsersService(DSLContext dslContext,UsersDao usersDao){
+    public UsersService(DSLContext dslContext,MUsersDao mUsersDao){
         this.dslContext = dslContext;
-        this.usersDao = usersDao;
+        this.mUsersDao = mUsersDao;
     }
 
     public int count(){
-        Users users = new Users();
+       /* MUsers users = new MUsers();
         users.setId(2);
         users.setName("wu");
         users.setPassword("123456");
-        usersDao.insert(users);
+        mUsersDao.insert(users);*/
         int i = 1;
-      List<Users> list =  dslContext.select().from(USERS)
-                .where(USERS.ID.eq(i))
-                .fetch().into(Users.class);
+      List<MUsers> list =  dslContext.select().from(M_USERS)
+                .where(M_USERS.ID.eq(i))
+                .fetch().into(MUsers.class);
 
         return list.size();
     }
