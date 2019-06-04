@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+var app=angular.module("myApp",[]);
+app.controller("myCon",function ($scope,$http) {
+    $http.get("/index4").then(function (response) {
+
+        $scope.hello=response.data.name
+    })
+})
