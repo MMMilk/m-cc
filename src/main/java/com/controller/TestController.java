@@ -33,14 +33,13 @@ public class TestController {
     public ModelAndView test3(){
         int count = usersService.count();
         System.out.print("============="+count);
-        return  new ModelAndView("index");
+        return  new ModelAndView("login");
     }
 
     @RequestMapping(value = "/index4",method =  RequestMethod.GET)
     public MUsers test4(){
         MUsers users = new MUsers();
         users.setId(111);
-        users.setName("wu");
         users.setPassword("1234556");
         users.setSex("boy");
         return  users;
