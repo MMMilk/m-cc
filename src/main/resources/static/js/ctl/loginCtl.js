@@ -1,24 +1,5 @@
-/*
-angular.module("loginApp",[])
-    .controller("loginCtrl",function ($scope,$http) {
-
-        $http.get("/login/loginSubmit").then(function (data) {
-
-           alert("111");
-        })
-
-
-    })*/
-
-var formData = {
-    method: 'POST',
-    url: 'http://localhost:8080/login/loginSubmit',
-    data: {username:'1',password:'1',authority:'0'}
-}
-
-
 var app = angular.module("loginApp",[]);
-app.controller('loginCtrl',function ($scope,$http) {
+app.controller('loginCtrl',function ($scope,$http,$location) {
     $scope.submitForm = function () {
         $http({
             method:'post',
@@ -31,10 +12,25 @@ app.controller('loginCtrl',function ($scope,$http) {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             }
-        }).then(function(data){
-            console.log(data);
-        },function(data){
-            console.log(data);
+        }).then(function(resp){
+            var flg = resp.data.msg;
+            if(flg == "success"){
+               // window.open("success","_self");
+               window.location.href="../login/success";
+            }else{
+                alert("登录错误");
+            }
+        },function(resp){
+            console.log(resp.data);
         });
     }
 });
+
+
+var myApp=angular.module("myApp",[]);
+myApp.controller("myCon",function ($scope,$http) {
+    $http.get("/login/showInfo").then(function (response) {
+        $scope.userName=response.data.username;
+    })
+})
+

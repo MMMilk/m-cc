@@ -1,7 +1,6 @@
 package com.service;
 
 import com.db.tables.daos.MUsersDao;
-import com.db.tables.pojos.MUsers;
 import com.utils.ConstantUtil;
 import org.jooq.Condition;
 import org.jooq.DSLContext;
