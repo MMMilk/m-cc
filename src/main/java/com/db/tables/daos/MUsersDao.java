@@ -29,7 +29,7 @@ import org.springframework.stereotype.Repository;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 @Repository
-public class MUsersDao extends DAOImpl<MUsersRecord, com.db.tables.pojos.MUsers, Integer> {
+public class MUsersDao extends DAOImpl<MUsersRecord, com.db.tables.pojos.MUsers, String> {
 
     /**
      * Create a new MUsersDao without any configuration
@@ -50,21 +50,21 @@ public class MUsersDao extends DAOImpl<MUsersRecord, com.db.tables.pojos.MUsers,
      * {@inheritDoc}
      */
     @Override
-    protected Integer getId(com.db.tables.pojos.MUsers object) {
+    protected String getId(com.db.tables.pojos.MUsers object) {
         return object.getId();
     }
 
     /**
      * Fetch records that have <code>id IN (values)</code>
      */
-    public List<com.db.tables.pojos.MUsers> fetchById(Integer... values) {
+    public List<com.db.tables.pojos.MUsers> fetchById(String... values) {
         return fetch(MUsers.M_USERS.ID, values);
     }
 
     /**
      * Fetch a unique record that has <code>id = value</code>
      */
-    public com.db.tables.pojos.MUsers fetchOneById(Integer value) {
+    public com.db.tables.pojos.MUsers fetchOneById(String value) {
         return fetchOne(MUsers.M_USERS.ID, value);
     }
 

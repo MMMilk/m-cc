@@ -34,7 +34,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class MUsers extends TableImpl<MUsersRecord> {
 
-    private static final long serialVersionUID = -333950441;
+    private static final long serialVersionUID = -6217023;
 
     /**
      * The reference instance of <code>milk.m_users</code>
@@ -52,32 +52,32 @@ public class MUsers extends TableImpl<MUsersRecord> {
     /**
      * The column <code>milk.m_users.id</code>.
      */
-    public final TableField<MUsersRecord, Integer> ID = createField("id", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
+    public final TableField<MUsersRecord, String> ID = createField("id", org.jooq.impl.SQLDataType.VARCHAR.length(255).nullable(false), this, "");
 
     /**
-     * The column <code>milk.m_users.username</code>. 姓名
+     * The column <code>milk.m_users.username</code>. 用户名（邮箱）
      */
-    public final TableField<MUsersRecord, String> USERNAME = createField("username", org.jooq.impl.SQLDataType.VARCHAR.length(255), this, "姓名");
+    public final TableField<MUsersRecord, String> USERNAME = createField("username", org.jooq.impl.SQLDataType.VARCHAR.length(255).nullable(false), this, "用户名（邮箱）");
 
     /**
      * The column <code>milk.m_users.password</code>. 密码
      */
-    public final TableField<MUsersRecord, String> PASSWORD = createField("password", org.jooq.impl.SQLDataType.VARCHAR.length(255), this, "密码");
+    public final TableField<MUsersRecord, String> PASSWORD = createField("password", org.jooq.impl.SQLDataType.VARCHAR.length(255).nullable(false), this, "密码");
 
     /**
      * The column <code>milk.m_users.authority</code>. 权限身份
      */
-    public final TableField<MUsersRecord, String> AUTHORITY = createField("authority", org.jooq.impl.SQLDataType.VARCHAR.length(255), this, "权限身份");
+    public final TableField<MUsersRecord, String> AUTHORITY = createField("authority", org.jooq.impl.SQLDataType.VARCHAR.length(255).nullable(false), this, "权限身份");
 
     /**
      * The column <code>milk.m_users.sex</code>. 性别
      */
-    public final TableField<MUsersRecord, String> SEX = createField("sex", org.jooq.impl.SQLDataType.VARCHAR.length(255), this, "性别");
+    public final TableField<MUsersRecord, String> SEX = createField("sex", org.jooq.impl.SQLDataType.VARCHAR.length(255).nullable(false), this, "性别");
 
     /**
      * The column <code>milk.m_users.delete_flg</code>.
      */
-    public final TableField<MUsersRecord, String> DELETE_FLG = createField("delete_flg", org.jooq.impl.SQLDataType.VARCHAR.length(255), this, "");
+    public final TableField<MUsersRecord, String> DELETE_FLG = createField("delete_flg", org.jooq.impl.SQLDataType.VARCHAR.length(255).nullable(false), this, "");
 
     /**
      * Create a <code>milk.m_users</code> table reference

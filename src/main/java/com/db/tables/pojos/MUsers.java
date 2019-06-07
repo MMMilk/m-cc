@@ -22,14 +22,14 @@ import javax.annotation.Generated;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class MUsers implements Serializable {
 
-    private static final long serialVersionUID = 723181083;
+    private static final long serialVersionUID = -1739560945;
 
-    private Integer id;
-    private String  username;
-    private String  password;
-    private String  authority;
-    private String  sex;
-    private String  deleteFlg;
+    private String id;
+    private String username;
+    private String password;
+    private String authority;
+    private String sex;
+    private String deleteFlg;
 
     public MUsers() {}
 
@@ -43,12 +43,12 @@ public class MUsers implements Serializable {
     }
 
     public MUsers(
-        Integer id,
-        String  username,
-        String  password,
-        String  authority,
-        String  sex,
-        String  deleteFlg
+        String id,
+        String username,
+        String password,
+        String authority,
+        String sex,
+        String deleteFlg
     ) {
         this.id = id;
         this.username = username;
@@ -58,11 +58,11 @@ public class MUsers implements Serializable {
         this.deleteFlg = deleteFlg;
     }
 
-    public Integer getId() {
+    public String getId() {
         return this.id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 

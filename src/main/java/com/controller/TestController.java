@@ -39,7 +39,7 @@ public class TestController {
     @RequestMapping(value = "/index4",method =  RequestMethod.GET)
     public MUsers test4(){
         MUsers users = new MUsers();
-        users.setId(111);
+       // users.setId(111);
         users.setPassword("1234556");
         users.setSex("boy");
         return  users;

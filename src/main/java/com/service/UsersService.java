@@ -32,11 +32,11 @@ public class UsersService {
         users.setPassword("123456");
         mUsersDao.insert(users);*/
         int i = 1;
-      List<MUsers> list =  dslContext.select().from(M_USERS)
+   /*   List<MUsers> list =  dslContext.select().from(M_USERS)
                 .where(M_USERS.ID.eq(i))
-                .fetch().into(MUsers.class);
+                .fetch().into(MUsers.class);*/
 
-        return list.size();
+        return i;
     }
 
 }

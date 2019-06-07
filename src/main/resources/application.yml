@@ -2,6 +2,8 @@ server:
     port: 8080
 
 spring:
+  messages:
+    basename: i18n
   datasource:
     url: jdbc:mysql://localhost:3306/milk
     username: root
@@ -9,6 +11,21 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
   jooq:
     sql-dialect: mysql
+  mail:
+    host: smtp.163.com
+    port: 465
+    username: xiaogm1226@163.com
+    password: 15851146830qaz
+    properties:
+      mail:
+        smtp:
+          auth: true
+          socketFactory:
+            port: 465
+            class: javax.net.ssl.SSLSocketFactory
+          starttls:
+            enable: true
+            required: true
   thymeleaf:
     cache: false
     prefix: classpath:/templates/
@@ -16,5 +33,6 @@ spring:
     mode: HTML5
     encoding: UTF-8
     content-type: text/html
+
 
 
