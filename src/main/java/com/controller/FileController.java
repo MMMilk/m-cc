@@ -8,10 +8,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 @RequestMapping("/picture")
-public class PictureController {
+public class FileController {
 
     @RequestMapping(value = "/init",method = RequestMethod.GET)
     public ModelAndView go(){
-        return new ModelAndView("picture");
+        return new ModelAndView("file");
     }
 }
