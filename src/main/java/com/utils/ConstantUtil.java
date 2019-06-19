@@ -18,4 +18,11 @@ public class ConstantUtil {
     public static  String SUBJECT = "SUBJECT";
 
     public static  String CODE = "CODE";
+
+    public static  String USER01 = "USER01";
+    public static  String USER02 = "USER02";
+
+    public static  String SEX01 = "SEX01";
+    public static  String SEX02 = "SEX02";
+
 }

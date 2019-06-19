@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>index</title>
+</head>
+<script  src="../js/ordinary/angular.min.js"></script>
+<script  src="../js/ordinary/angular-route.js"></script>
+<script  src="../js/ctl/pageCtl.js"></script>
+<script  src="../js/ordinary/jquery.js"></script>
+<body>
+
+<div align="center" style="margin-top: 150px;" ng-app="pageApp" ng-controller="pageCtl">
+    <table id="pageInfo"  border="1">
+        <tr>
+            <th>ID</th>
+            <th>用户名</th>
+            <th>密码</th>
+            <th>身份</th>
+            <th>性别</th>
+            <th>操作</th>
+        </tr>
+        <tr  ng-repeat="item in items">
+            <th>{{item.id}}</th>
+            <th>{{item.username}}</th>
+            <th>{{item.password}}</th>
+            <th>{{item.authority}}</th>
+            <th>{{item.sex}}</th>
+            <th><button ng-click="update(item.id)"  style="height:25px;width:60px;">更新</button><button ng-click="delete(item.id)"  style="height:25px;width:60px;">删除</button></th>
+        </tr>
+    </table>
+
+    <div>
+        <button ng-click="goPage('first')">首页</button>
+        <button ng-click="goPage('back')" id="backId" disabled="disabled">上一页</button>
+        <span ng-repeat="num in pageTotal">
+            <button ng-click="goPage(num)">{{num}}</button>
+        </span>
+        <button ng-click="goPage('next')" id="nextId">下一页</button>
+        <button ng-click="goPage('last')">末页</button>总计：<span>{{numTotals}}</span>条记录
+    </div>
+
+    <!--size-->
+    <input type="text" value="2" hidden="hidden" id="pageSize"/>
+    <!--当前页-->
+    <input type="text" value="1" hidden="hidden" id="pageNum" />
+    <!--总页数-->
+    <input type="text" value="" hidden="hidden" id="pageTotals" />
+
+</div>
+
+</body>
+</html>
