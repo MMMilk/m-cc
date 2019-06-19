@@ -6,11 +6,18 @@
 </head>
 <script src="../js/ordinary/angular.min.js"></script>
 <script src="../js/ordinary/angular-route.js"></script>
+<script src="../js/ordinary/jquery.js"></script>
+<script src="../js/ctl/fileCtl.js"></script>
 <body>
 <div>
- <form>
-     <input type="file" file-mode="pictureFile" multiple="multiple"/>
+<form ng-app="fileApp" ng-controller="fileCtrl" id="fileUpload" enctype='multipart/form-data'>
+     <input type="file" id="up_files"  name="files"   multiple="multiple" accept="image/*"/><br/>
+     <button type="button" ng-click="uploadFile()" >提交</button>
  </form>
+
 </div>
+<script>
+
+</script>
 </body>
 </html>

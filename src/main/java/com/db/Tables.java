@@ -4,6 +4,7 @@
 package com.db;
 
 
+import com.db.tables.MFiles;
 import com.db.tables.MUsers;
 
 import javax.annotation.Generated;
@@ -21,6 +22,11 @@ import javax.annotation.Generated;
 )
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Tables {
+
+    /**
+     * The table <code>milk.m_files</code>.
+     */
+    public static final MFiles M_FILES = com.db.tables.MFiles.M_FILES;
 
     /**
      * The table <code>milk.m_users</code>.

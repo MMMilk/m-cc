@@ -4,7 +4,9 @@
 package com.db;
 
 
+import com.db.tables.MFiles;
 import com.db.tables.MUsers;
+import com.db.tables.records.MFilesRecord;
 import com.db.tables.records.MUsersRecord;
 
 import javax.annotation.Generated;
@@ -36,6 +38,7 @@ public class Keys {
     // UNIQUE and PRIMARY KEY definitions
     // -------------------------------------------------------------------------
 
+    public static final UniqueKey<MFilesRecord> KEY_M_FILES_PRIMARY = UniqueKeys0.KEY_M_FILES_PRIMARY;
     public static final UniqueKey<MUsersRecord> KEY_M_USERS_PRIMARY = UniqueKeys0.KEY_M_USERS_PRIMARY;
 
     // -------------------------------------------------------------------------
@@ -48,6 +51,7 @@ public class Keys {
     // -------------------------------------------------------------------------
 
     private static class UniqueKeys0 extends AbstractKeys {
+        public static final UniqueKey<MFilesRecord> KEY_M_FILES_PRIMARY = createUniqueKey(MFiles.M_FILES, "KEY_m_files_PRIMARY", MFiles.M_FILES.ID);
         public static final UniqueKey<MUsersRecord> KEY_M_USERS_PRIMARY = createUniqueKey(MUsers.M_USERS, "KEY_m_users_PRIMARY", MUsers.M_USERS.ID);
     }
 }

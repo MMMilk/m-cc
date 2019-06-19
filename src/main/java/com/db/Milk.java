@@ -4,6 +4,7 @@
 package com.db;
 
 
+import com.db.tables.MFiles;
 import com.db.tables.MUsers;
 
 import java.util.ArrayList;
@@ -30,12 +31,17 @@ import org.jooq.impl.SchemaImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Milk extends SchemaImpl {
 
-    private static final long serialVersionUID = 483729025;
+    private static final long serialVersionUID = -884499983;
 
     /**
      * The reference instance of <code>milk</code>
      */
     public static final Milk MILK = new Milk();
+
+    /**
+     * The table <code>milk.m_files</code>.
+     */
+    public final MFiles M_FILES = com.db.tables.MFiles.M_FILES;
 
     /**
      * The table <code>milk.m_users</code>.
@@ -67,6 +73,7 @@ public class Milk extends SchemaImpl {
 
     private final List<Table<?>> getTables0() {
         return Arrays.<Table<?>>asList(
+            MFiles.M_FILES,
             MUsers.M_USERS);
     }
 }
