@@ -17,7 +17,6 @@ pageApp.controller("pageCtl",function ($scope,$http,$sce) {
         var totalPages = resp.data.totalPages;
         $scope.numTotals = resp.data.totalCount;
         $("#pageTotals").val(resp.data.totalPages);
-
         if(totalPages > 0 ){
             if(totalPages ==1){
                 $scope.pageTotal = [1];
@@ -35,34 +34,39 @@ pageApp.controller("pageCtl",function ($scope,$http,$sce) {
         var pageTotals = $("#pageTotals").val();//页数
         if(flg == 'first'){
              pageNum = 1;
+            $("#backId").hide();
         }else if(flg == 'last'){
             pageNum = pageTotals;
+            $("#nextId").hide();
         }else if(flg == 'back'){
             pageNum = pageNum*1 - 1*1;
             if(pageNum == 1){
-                $("#backId").attr("disabled","disabled");
+                $("#backId").hide();
             }
         }else if(flg == 'next'){
             pageNum = pageNum*1 + 1*1;
+            alert(pageNum);
             if(pageNum == pageTotals){
-                alert(pageNum+"====="+pageTotals);
-                $("#nextId").attr("disabled","disabled");
+                $("#nextId").hide();
             }
         }else {
             pageNum = flg;
+            alert(pageNum == pageTotals);
+            if(pageNum == pageTotals){
+                $("#nextId").hide();
+            }
         }
         $("#pageNum").val(pageNum);
-
         if(pageNum == 1){
-            $("#backId").attr("disabled","disabled");
+            $("#backId").hide();
         }else {
-            $("#backId").removeAttr("disabled");
+            $("#backId").show();
         }
 
         if(flg == 'last'){
-            $("#nextId").attr("disabled","disabled");
+            $("#nextId").hide();
         }else {
-            $("#nextId").removeAttr("disabled");
+            $("#nextId").show();
         }
 
         $http({

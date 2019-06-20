@@ -32,7 +32,7 @@
 
     <div>
         <button ng-click="goPage('first')">首页</button>
-        <button ng-click="goPage('back')" id="backId" disabled="disabled">上一页</button>
+        <button ng-click="goPage('back')" id="backId" hidden="hidden">上一页</button>
         <span ng-repeat="num in pageTotal">
             <button ng-click="goPage(num)">{{num}}</button>
         </span>
