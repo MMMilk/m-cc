@@ -9,15 +9,21 @@
 <script src="../js/ordinary/jquery.js"></script>
 <script src="../js/ctl/fileCtl.js"></script>
 <body>
-<div>
+<div ng-app="fileApp" ng-controller="fileCtrl">
 <form ng-app="fileApp" ng-controller="fileCtrl" id="fileUpload" enctype='multipart/form-data'>
      <input type="file" id="up_files"  name="files"   multiple="multiple" accept="image/*"/><br/>
      <button type="button" ng-click="uploadFile()" >提交</button>
  </form>
 
-</div>
-<script>
 
-</script>
+<div>
+    图片显示:
+    <span ng-repeat="url in urlList">
+      <img ng-src="{{url.fileUrl}}" width="40px;" height="40px;"/>
+    </span>
+</div>
+
+</div>
+
 </body>
 </html>

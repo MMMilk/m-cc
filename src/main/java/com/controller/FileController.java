@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 @RestController
@@ -34,6 +35,14 @@ public class FileController {
         MUsers users = CommonUtil.getLoginUser(session);
         fileService.insertFile(fileList,"123");
         //System.out.println(fileList[0].getOriginalFilename()+"========");
+        return ajaxJson;
+    }
+
+
+    @RequestMapping(value = "/getInfo",method = RequestMethod.GET)
+    public AjaxJson getInfoFile(HttpServletRequest request){
+        AjaxJson ajaxJson = new AjaxJson();
+        ajaxJson.setObj(fileService.getFileInfo(request.getContextPath()));
         return ajaxJson;
     }
 }

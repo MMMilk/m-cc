@@ -17,7 +17,28 @@ fileApp.controller("fileCtrl",function ($scope,$http) {
         }).catch(function (error) {//加上catch
             console.log(error);
         })
-    }
+    };
+
+    $http({
+        method:"get",
+        url:"/file/getInfo",
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        }
+    }).then(function (resp) {
+        alert(JSON.stringify(resp.data));
+        $scope.urlList = resp.data.data;
+    });
 
 
 });
+
+
+
+/*var fileGetApp = angular.module("fileGetApp",[]);
+fileGetApp.controller("fileGetCtl",function ($scope,$http) {
+    alert("111111");
+})*/
+
+
+

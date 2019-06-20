@@ -3,6 +3,7 @@ package com.service;
 import com.db.tables.daos.MFilesDao;
 import com.db.tables.pojos.MFiles;
 import com.utils.CommonUtil;
+import com.view.FileInfoView;
 import org.jooq.DSLContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -16,6 +17,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.time.LocalDateTime;
+import java.util.List;
+
+import static com.db.tables.MFiles.M_FILES;
 
 @Service
 @Component
@@ -36,8 +40,8 @@ public class FileService {
     }
 
     public boolean insertFile( MultipartFile[] fileList,String username){
+        LocalDateTime now =  LocalDateTime.now();
         for(MultipartFile file : fileList){
-            LocalDateTime now =  LocalDateTime.now();
             MFiles mFiles = new MFiles();
             mFiles.setId(CommonUtil.getUuid());
             mFiles.setFileName(file.getOriginalFilename());
@@ -47,6 +51,19 @@ public class FileService {
             CommonUtil.saveFile(path,file,now);
         }
         return true;
+    }
+
+    public List<FileInfoView> getFileInfo(String context){
+        return dslContext.select().from(M_FILES)
+                .fetch()
+                .map(v->
+                        new FileInfoView(
+                                v.getValue(M_FILES.FILE_NAME),
+                                v.getValue(M_FILES.FILE_URL)+"/"+ v.getValue(M_FILES.FILE_NAME),
+                                v.getValue(M_FILES.USERNAME)
+                        )
+
+                );
     }
 
 
