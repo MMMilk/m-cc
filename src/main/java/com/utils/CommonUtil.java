@@ -43,7 +43,7 @@ public class CommonUtil {
     }
 
 
-    //生成上次文件的新名字
+    //生成上次文件的二级path
     public static String getFileName(LocalDateTime now){
         DateTimeFormatter format = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
         String name = format.format(now)+"-"+(Math.random()*9+1)*1000000000;
