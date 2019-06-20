@@ -32,8 +32,8 @@ public class FileController {
     public AjaxJson fileUpload(@RequestParam("file") MultipartFile[] fileList, HttpSession session){
         AjaxJson ajaxJson = new AjaxJson();
         MUsers users = CommonUtil.getLoginUser(session);
-        //fileService.insertFile(fileList,users.getUsername());
-        System.out.println(fileList[0].getOriginalFilename()+"========");
+        fileService.insertFile(fileList,"123");
+        //System.out.println(fileList[0].getOriginalFilename()+"========");
         return ajaxJson;
     }
 }

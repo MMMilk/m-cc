@@ -28,7 +28,7 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class MFilesRecord extends UpdatableRecordImpl<MFilesRecord> implements Record4<String, String, String, String> {
 
-    private static final long serialVersionUID = 1667280143;
+    private static final long serialVersionUID = -981500951;
 
     /**
      * Setter for <code>milk.m_files.id</code>. 主键
@@ -45,14 +45,14 @@ public class MFilesRecord extends UpdatableRecordImpl<MFilesRecord> implements R
     }
 
     /**
-     * Setter for <code>milk.m_files.file_name</code>. 文件名称
+     * Setter for <code>milk.m_files.file_name</code>. 文件名称原本
      */
     public void setFileName(String value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>milk.m_files.file_name</code>. 文件名称
+     * Getter for <code>milk.m_files.file_name</code>. 文件名称原本
      */
     public String getFileName() {
         return (String) get(1);

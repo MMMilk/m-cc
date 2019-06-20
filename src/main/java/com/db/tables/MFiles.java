@@ -34,7 +34,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class MFiles extends TableImpl<MFilesRecord> {
 
-    private static final long serialVersionUID = -1265852415;
+    private static final long serialVersionUID = -2039055077;
 
     /**
      * The reference instance of <code>milk.m_files</code>
@@ -55,9 +55,9 @@ public class MFiles extends TableImpl<MFilesRecord> {
     public final TableField<MFilesRecord, String> ID = createField("id", org.jooq.impl.SQLDataType.VARCHAR.length(128).nullable(false), this, "主键");
 
     /**
-     * The column <code>milk.m_files.file_name</code>. 文件名称
+     * The column <code>milk.m_files.file_name</code>. 文件名称原本
      */
-    public final TableField<MFilesRecord, String> FILE_NAME = createField("file_name", org.jooq.impl.SQLDataType.VARCHAR.length(255).nullable(false), this, "文件名称");
+    public final TableField<MFilesRecord, String> FILE_NAME = createField("file_name", org.jooq.impl.SQLDataType.VARCHAR.length(255).nullable(false), this, "文件名称原本");
 
     /**
      * The column <code>milk.m_files.file_url</code>. 文件地址

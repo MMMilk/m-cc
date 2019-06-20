@@ -35,4 +35,5 @@ spring:
     content-type: text/html
 
 
-
+c_milk:
+  base-upload-path: D:/pic

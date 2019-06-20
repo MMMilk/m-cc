@@ -28,7 +28,7 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class MUsersRecord extends UpdatableRecordImpl<MUsersRecord> implements Record6<String, String, String, String, String, String> {
 
-    private static final long serialVersionUID = -1120845021;
+    private static final long serialVersionUID = -1133959541;
 
     /**
      * Setter for <code>milk.m_users.id</code>.
@@ -45,14 +45,14 @@ public class MUsersRecord extends UpdatableRecordImpl<MUsersRecord> implements R
     }
 
     /**
-     * Setter for <code>milk.m_users.username</code>. 用户名（邮箱）
+     * Setter for <code>milk.m_users.username</code>. 姓名
      */
     public void setUsername(String value) {
         set(1, value);
     }
 
     /**
-     * Getter for <code>milk.m_users.username</code>. 用户名（邮箱）
+     * Getter for <code>milk.m_users.username</code>. 姓名
      */
     public String getUsername() {
         return (String) get(1);
@@ -73,14 +73,14 @@ public class MUsersRecord extends UpdatableRecordImpl<MUsersRecord> implements R
     }
 
     /**
-     * Setter for <code>milk.m_users.authority</code>. 权限身份
+     * Setter for <code>milk.m_users.authority</code>. 权限
      */
     public void setAuthority(String value) {
         set(3, value);
     }
 
     /**
-     * Getter for <code>milk.m_users.authority</code>. 权限身份
+     * Getter for <code>milk.m_users.authority</code>. 权限
      */
     public String getAuthority() {
         return (String) get(3);
