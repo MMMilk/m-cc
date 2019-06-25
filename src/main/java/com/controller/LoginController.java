@@ -7,6 +7,7 @@ import com.utils.AjaxJson;
 import com.utils.CommonUtil;
 import com.utils.ConstantUtil;
 import com.utils.EmailUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -15,6 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpSession;
 
 @RestController
+@Slf4j
 @RequestMapping("/login")
 public class LoginController {
 
@@ -24,9 +26,11 @@ public class LoginController {
     @Autowired
     private EmailUtil emailUtil;
 
+
     //跳转登录页面
     @RequestMapping(value = "/index",method =  RequestMethod.GET)
     public ModelAndView index(){
+        //log.info("1233333333333333333333333333");
         return  new ModelAndView("login");
     }
 
@@ -78,6 +82,7 @@ public class LoginController {
     @RequestMapping(value = "/registered",method =  RequestMethod.POST)
     public AjaxJson registered(String email,String code,String password,HttpSession session){
         AjaxJson ajaxJson = new AjaxJson();
+
         String emailY = session.getAttribute("eamil").toString();
         if(email.equals(emailY)){
             if(code.equals(session.getAttribute("code").toString())){
