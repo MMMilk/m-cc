@@ -57,14 +57,14 @@ public class LoginController {
     }
 
 
-    //跳转登录页面
+    //跳转注册页面
     @RequestMapping(value = "/register",method =  RequestMethod.GET)
     public ModelAndView register(){
         return  new ModelAndView("register");
     }
 
 
-    //跳转登录页面
+    //发送邮箱验证码
     @RequestMapping(value = "/getEmail",method =  RequestMethod.POST)
     public void getEmail(String email,HttpSession session){
         int code = (int) ((Math.random()*9+1)*100000);
@@ -74,17 +74,23 @@ public class LoginController {
 
     }
 
+    //判断邮箱验证码是否正确
     @RequestMapping(value = "/registered",method =  RequestMethod.POST)
-    public AjaxJson registered(String code,String password,HttpSession session){
+    public AjaxJson registered(String email,String code,String password,HttpSession session){
         AjaxJson ajaxJson = new AjaxJson();
-        String email = session.getAttribute("eamil").toString();
-        if(code.equals(session.getAttribute("code").toString())){
-            loginService.registered(email,password);
-            ajaxJson.setMsg(ConstantUtil.SUCCESS);
+        String emailY = session.getAttribute("eamil").toString();
+        if(email.equals(emailY)){
+            if(code.equals(session.getAttribute("code").toString())){
+                loginService.registered(email,password);
+                ajaxJson.setMsg(ConstantUtil.SUCCESS);
+                session.removeAttribute("eamil");
+                session.removeAttribute("code");
+            }else {
+                ajaxJson.setMsg(ConstantUtil.PASS_ERROR);
+            }
         }else {
-            ajaxJson.setMsg(ConstantUtil.PASS_ERROR);
+            ajaxJson.setMsg("输入的邮箱两次不一样");
         }
-        session.removeAttribute("eamil");
         return  ajaxJson;
     }
 

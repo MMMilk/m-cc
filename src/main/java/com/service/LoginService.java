@@ -64,7 +64,7 @@ public class LoginService {
         users.setId(CommonUtil.getUuid());
         users.setUsername(eamil);
         users.setPassword(password);
-        users.setSex("boy");
+        users.setSex(ConstantUtil.TABLE_DELETE_FLG_FALSE);
         users.setDeleteFlg(ConstantUtil.TABLE_DELETE_FLG_FALSE);
         users.setAuthority(ConstantUtil.TABLE_DELETE_FLG_FALSE);
         mUsersDao.insert(users);
