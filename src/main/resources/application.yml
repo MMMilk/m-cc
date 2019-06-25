@@ -33,7 +33,11 @@ spring:
     mode: HTML5
     encoding: UTF-8
     content-type: text/html
+logging:
+  file: logs/log.log
 
 
 c_milk:
   base-upload-path: /pic
+
+
