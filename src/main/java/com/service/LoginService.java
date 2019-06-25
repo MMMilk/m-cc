@@ -53,7 +53,7 @@ public class LoginService {
 
     //获取的登录的用户对象
     public MUsers selectUser(String userName, String password){
-        Condition condition = M_USERS.DELETE_FLG.eq(ConstantUtil.TABLE_DELETE_FLG_FALSE).and(M_USERS.USERNAME.eq(userName)).and(M_USERS.USERNAME.eq(userName));
+        Condition condition = M_USERS.DELETE_FLG.eq(ConstantUtil.TABLE_DELETE_FLG_FALSE).and(M_USERS.USERNAME.eq(userName)).and(M_USERS.PASSWORD.eq(password));
         return dslContext.select().from(M_USERS)
                 .where(condition)
                 .fetchOne().into(MUsers.class);
@@ -63,7 +63,7 @@ public class LoginService {
         MUsers users = new MUsers();
         users.setId(CommonUtil.getUuid());
         users.setUsername(eamil);
-        users.setPassword(password);
+        users.setPassword(CommonUtil.getMD5(password));
         users.setSex(ConstantUtil.TABLE_DELETE_FLG_FALSE);
         users.setDeleteFlg(ConstantUtil.TABLE_DELETE_FLG_FALSE);
         users.setAuthority(ConstantUtil.TABLE_DELETE_FLG_FALSE);

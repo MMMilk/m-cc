@@ -1,15 +1,13 @@
 package com.utils;
 
 import com.db.tables.pojos.MUsers;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
+
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpSession;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.UUID;
@@ -66,6 +64,29 @@ public class CommonUtil {
         }
     }
 
+
+
+    //MD05加密
+    public static String getMD5(String str){
+        try {
+            MessageDigest messageDigest =  MessageDigest.getInstance("MD5");
+            byte[] b = messageDigest.digest(str.getBytes("UTF-8"));
+            int i;
+            StringBuffer buf = new StringBuffer("");
+            for (int offset = 0; offset < b.length; offset++) {
+                i = b[offset];
+                if (i < 0)
+                    i += 256;
+                if (i < 16)
+                    buf.append("0");
+                buf.append(Integer.toHexString(i));
+            }
+            return buf.toString();
+        } catch (NoSuchAlgorithmException | UnsupportedEncodingException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 
 
 }

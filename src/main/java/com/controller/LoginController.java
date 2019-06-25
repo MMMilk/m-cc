@@ -39,10 +39,10 @@ public class LoginController {
     @RequestMapping(value = "/loginSubmit" ,method = RequestMethod.POST)
     public AjaxJson loginFlg(String username, String password,HttpSession session){
         AjaxJson ajaxJson = new AjaxJson();
-        String result = loginService.selectByUserName(username,password);
+        String result = loginService.selectByUserName(username,CommonUtil.getMD5(password));
         ajaxJson.setMsg(result);
         if(result.equals(ConstantUtil.SUCCESS)) {
-            CommonUtil.upDateLoginUser(session,loginService.selectUser(username,password));
+            CommonUtil.upDateLoginUser(session,loginService.selectUser(username,CommonUtil.getMD5(password)));
         }
         return ajaxJson;
     }
