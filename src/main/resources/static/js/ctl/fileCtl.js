@@ -1,5 +1,17 @@
+function showPic() {
+    var windowURL = window.URL || window.webkitURL;
+    var file = document.getElementById("up_files").files;
+    var html= "";
+    for(var i = 0 ; i < file.length ;i++){
+        var url = windowURL.createObjectURL(file[i]);
+        html = html+"<img src='"+url+" ' width='40px;' height='40px;'/>&nbsp;&nbsp;&nbsp;";
+        $("#showPic").html(html);
+    }
+}
+
 var fileApp = angular.module("fileApp",[]);
 fileApp.controller("fileCtrl",function ($scope,$http) {
+
     $scope.uploadFile = function () {
         var form = new FormData();
         var file = document.getElementById("up_files").files;
@@ -26,7 +38,7 @@ fileApp.controller("fileCtrl",function ($scope,$http) {
             'Content-Type': 'application/x-www-form-urlencoded'
         }
     }).then(function (resp) {
-        alert(JSON.stringify(resp.data));
+        //alert(JSON.stringify(resp.data));
         $scope.urlList = resp.data.data;
     });
 

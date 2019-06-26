@@ -10,14 +10,20 @@
 <script src="../js/ctl/fileCtl.js"></script>
 <body>
 <div ng-app="fileApp" ng-controller="fileCtrl">
-<form ng-app="fileApp" ng-controller="fileCtrl" id="fileUpload" enctype='multipart/form-data'>
-     <input type="file" id="up_files"  name="files"   multiple="multiple" accept="image/*"/><br/>
-     <button type="button" ng-click="uploadFile()" >提交</button>
- </form>
+    <form ng-app="fileApp" ng-controller="fileCtrl" id="fileUpload" enctype='multipart/form-data'>
+        <input type="file"  onchange="showPic()" id="up_files"  name="files" style="width:auto;height:23px;"   multiple="multiple" accept="image/*"/><br/><br/>
+        <button type="button" ng-click="uploadFile()" >提交</button>
+    </form><hr/>
+    <div>
+        图片预览：
+       <span id="showPic">
 
+       </span>
 
+    </div>
+<hr/>
 <div>
-    图片显示:
+    上传的图片显示:
     <span ng-repeat="url in urlList">
       <img ng-src="{{url.fileUrl}}" width="40px;" height="40px;"/>
     </span>
