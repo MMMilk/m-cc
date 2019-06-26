@@ -2,6 +2,7 @@ package com.controller;
 
 
 import com.db.tables.pojos.MUsers;
+import com.interceptor.Auth;
 import com.service.FileService;
 import com.utils.AjaxJson;
 import com.utils.CommonUtil;
@@ -21,6 +22,7 @@ public class FileController {
     @Autowired
     private FileService fileService;
 
+    @Auth
     @RequestMapping(value = "/init",method = RequestMethod.GET)
     public ModelAndView go(){
         return new ModelAndView("file");

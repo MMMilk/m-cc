@@ -3469,3 +3469,247 @@ org.xml.sax.SAXParseException: 要素のコンテンツは、整形式の文字�
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-8.5.27.jar:8.5.27]
 	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_101]
 
+2019-06-26 16:51:31.224  INFO 4396 --- [restartedMain] com.CcApplication                        : Starting CcApplication on WIN-JDOPIOPKF8K with PID 4396 (D:\c-cc\m-cc\target\classes started by Huynh in D:\c-cc\m-cc)
+2019-06-26 16:51:31.226  INFO 4396 --- [restartedMain] com.CcApplication                        : No active profile set, falling back to default profiles: default
+2019-06-26 16:51:31.873  INFO 4396 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@64212aa8: startup date [Wed Jun 26 16:51:31 JST 2019]; root of context hierarchy
+2019-06-26 16:51:37.124  INFO 4396 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-06-26 16:51:37.139  INFO 4396 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-26 16:51:37.141  INFO 4396 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2019-06-26 16:51:37.282  INFO 4396 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-26 16:51:37.283  INFO 4396 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5410 ms
+2019-06-26 16:51:37.523  INFO 4396 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-06-26 16:51:37.529  INFO 4396 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-06-26 16:51:37.530  INFO 4396 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-06-26 16:51:37.530  INFO 4396 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-06-26 16:51:37.530  INFO 4396 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-06-26 16:51:39.611  INFO 4396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@64212aa8: startup date [Wed Jun 26 16:51:31 JST 2019]; root of context hierarchy
+2019-06-26 16:51:39.696  INFO 4396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/init],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.FileController.go()
+2019-06-26 16:51:39.700  INFO 4396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/fileUpload],methods=[POST]}" onto public com.utils.AjaxJson com.controller.FileController.fileUpload(org.springframework.web.multipart.MultipartFile[],javax.servlet.http.HttpSession)
+2019-06-26 16:51:39.700  INFO 4396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/getInfo],methods=[GET]}" onto public com.utils.AjaxJson com.controller.FileController.getInfoFile(javax.servlet.http.HttpServletRequest)
+2019-06-26 16:51:39.704  INFO 4396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/index],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.LoginController.index()
+2019-06-26 16:51:39.705  INFO 4396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/register],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.LoginController.register()
+2019-06-26 16:51:39.705  INFO 4396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/registered],methods=[POST]}" onto public com.utils.AjaxJson com.controller.LoginController.registered(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2019-06-26 16:51:39.706  INFO 4396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/loginSubmit],methods=[POST]}" onto public com.utils.AjaxJson com.controller.LoginController.loginFlg(java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2019-06-26 16:51:39.706  INFO 4396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/success],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.LoginController.success()
+2019-06-26 16:51:39.707  INFO 4396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/showInfo],methods=[GET]}" onto public com.db.tables.pojos.MUsers com.controller.LoginController.showInfo(javax.servlet.http.HttpSession)
+2019-06-26 16:51:39.707  INFO 4396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/getEmail],methods=[POST]}" onto public void com.controller.LoginController.getEmail(java.lang.String,javax.servlet.http.HttpSession)
+2019-06-26 16:51:39.708  INFO 4396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/getInfo],methods=[GET]}" onto public com.utils.AjaxJson com.controller.PageController.getInfo(int,int)
+2019-06-26 16:51:39.709  INFO 4396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/goPage],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.PageController.goPage()
+2019-06-26 16:51:39.713  INFO 4396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index11],methods=[GET]}" onto public int com.controller.TestController.count()
+2019-06-26 16:51:39.713  INFO 4396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index21],methods=[GET]}" onto public java.lang.String com.controller.TestController.test()
+2019-06-26 16:51:39.713  INFO 4396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index31],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.TestController.test3()
+2019-06-26 16:51:39.714  INFO 4396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index4],methods=[GET]}" onto public com.db.tables.pojos.MUsers com.controller.TestController.test4()
+2019-06-26 16:51:39.717  INFO 4396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-06-26 16:51:39.718  INFO 4396 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-06-26 16:51:39.765  INFO 4396 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/pic/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-26 16:51:39.766  INFO 4396 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-26 16:51:39.766  INFO 4396 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-26 16:51:39.835  INFO 4396 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-26 16:51:39.936  INFO 4396 --- [restartedMain] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2019-06-26 16:51:40.129  INFO 4396 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2019-06-26 16:51:40.379  INFO 4396 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-06-26 16:51:40.514  INFO 4396 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-06-26 16:56:46.582  INFO 4516 --- [restartedMain] com.CcApplication                        : Starting CcApplication on WIN-JDOPIOPKF8K with PID 4516 (D:\c-cc\m-cc\target\classes started by Huynh in D:\c-cc\m-cc)
+2019-06-26 16:56:46.584  INFO 4516 --- [restartedMain] com.CcApplication                        : No active profile set, falling back to default profiles: default
+2019-06-26 16:56:47.103  INFO 4516 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1fbd2221: startup date [Wed Jun 26 16:56:47 JST 2019]; root of context hierarchy
+2019-06-26 16:56:51.045  INFO 4516 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-06-26 16:56:51.063  INFO 4516 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-26 16:56:51.065  INFO 4516 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2019-06-26 16:56:51.218  INFO 4516 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-26 16:56:51.219  INFO 4516 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4116 ms
+2019-06-26 16:56:51.606  INFO 4516 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-06-26 16:56:51.611  INFO 4516 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-06-26 16:56:51.612  INFO 4516 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-06-26 16:56:51.612  INFO 4516 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-06-26 16:56:51.613  INFO 4516 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-06-26 16:56:54.486  INFO 4516 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1fbd2221: startup date [Wed Jun 26 16:56:47 JST 2019]; root of context hierarchy
+2019-06-26 16:56:54.567  INFO 4516 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/init],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.FileController.go()
+2019-06-26 16:56:54.570  INFO 4516 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/getInfo],methods=[GET]}" onto public com.utils.AjaxJson com.controller.FileController.getInfoFile(javax.servlet.http.HttpServletRequest)
+2019-06-26 16:56:54.572  INFO 4516 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/fileUpload],methods=[POST]}" onto public com.utils.AjaxJson com.controller.FileController.fileUpload(org.springframework.web.multipart.MultipartFile[],javax.servlet.http.HttpSession)
+2019-06-26 16:56:54.581  INFO 4516 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/index],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.LoginController.index()
+2019-06-26 16:56:54.582  INFO 4516 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/register],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.LoginController.register()
+2019-06-26 16:56:54.582  INFO 4516 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/registered],methods=[POST]}" onto public com.utils.AjaxJson com.controller.LoginController.registered(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2019-06-26 16:56:54.583  INFO 4516 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/showInfo],methods=[GET]}" onto public com.db.tables.pojos.MUsers com.controller.LoginController.showInfo(javax.servlet.http.HttpSession)
+2019-06-26 16:56:54.584  INFO 4516 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/success],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.LoginController.success()
+2019-06-26 16:56:54.584  INFO 4516 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/loginSubmit],methods=[POST]}" onto public com.utils.AjaxJson com.controller.LoginController.loginFlg(java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2019-06-26 16:56:54.585  INFO 4516 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/getEmail],methods=[POST]}" onto public void com.controller.LoginController.getEmail(java.lang.String,javax.servlet.http.HttpSession)
+2019-06-26 16:56:54.586  INFO 4516 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/getInfo],methods=[GET]}" onto public com.utils.AjaxJson com.controller.PageController.getInfo(int,int)
+2019-06-26 16:56:54.587  INFO 4516 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/goPage],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.PageController.goPage()
+2019-06-26 16:56:54.590  INFO 4516 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index11],methods=[GET]}" onto public int com.controller.TestController.count()
+2019-06-26 16:56:54.591  INFO 4516 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index21],methods=[GET]}" onto public java.lang.String com.controller.TestController.test()
+2019-06-26 16:56:54.592  INFO 4516 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index31],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.TestController.test3()
+2019-06-26 16:56:54.592  INFO 4516 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index4],methods=[GET]}" onto public com.db.tables.pojos.MUsers com.controller.TestController.test4()
+2019-06-26 16:56:54.596  INFO 4516 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-06-26 16:56:54.597  INFO 4516 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-06-26 16:56:54.644  INFO 4516 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/pic/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-26 16:56:54.644  INFO 4516 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-26 16:56:54.645  INFO 4516 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-26 16:56:54.722  INFO 4516 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-26 16:56:54.819  INFO 4516 --- [restartedMain] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2019-06-26 16:56:54.997  INFO 4516 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2019-06-26 16:56:55.245  INFO 4516 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-06-26 16:56:55.380  INFO 4516 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-06-26 16:56:55.460  INFO 4516 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2019-06-26 16:56:55.469  INFO 4516 --- [restartedMain] com.CcApplication                        : Started CcApplication in 9.77 seconds (JVM running for 12.091)
+2019-06-26 16:57:16.662  INFO 4516 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-06-26 16:57:16.663  INFO 4516 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-06-26 16:57:16.696  INFO 4516 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 33 ms
+2019-06-26 16:57:17.445  INFO 4516 --- [http-nio-8080-exec-7] org.jooq.Constants                       : 
+                                      
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@  @@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@        @@  @  @  @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@  @@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Thank you for using jOOQ 3.9.6
+                                      
+2019-06-26 16:58:29.824  INFO 4516 --- [Thread-17] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1fbd2221: startup date [Wed Jun 26 16:56:47 JST 2019]; root of context hierarchy
+2019-06-26 16:58:29.829  INFO 4516 --- [Thread-17] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-06-26 16:58:33.986  INFO 4516 --- [restartedMain] com.CcApplication                        : Starting CcApplication on WIN-JDOPIOPKF8K with PID 4516 (D:\c-cc\m-cc\target\classes started by Huynh in D:\c-cc\m-cc)
+2019-06-26 16:58:33.987  INFO 4516 --- [restartedMain] com.CcApplication                        : No active profile set, falling back to default profiles: default
+2019-06-26 16:58:33.991  INFO 4516 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@23daae50: startup date [Wed Jun 26 16:58:33 JST 2019]; root of context hierarchy
+2019-06-26 16:58:55.991  INFO 1376 --- [restartedMain] com.CcApplication                        : Starting CcApplication on WIN-JDOPIOPKF8K with PID 1376 (D:\c-cc\m-cc\target\classes started by Huynh in D:\c-cc\m-cc)
+2019-06-26 16:58:55.993  INFO 1376 --- [restartedMain] com.CcApplication                        : No active profile set, falling back to default profiles: default
+2019-06-26 16:58:56.684  INFO 1376 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3740fb10: startup date [Wed Jun 26 16:58:56 JST 2019]; root of context hierarchy
+2019-06-26 16:59:00.633  INFO 1376 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-06-26 16:59:00.651  INFO 1376 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-26 16:59:00.653  INFO 1376 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2019-06-26 16:59:00.801  INFO 1376 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-26 16:59:00.801  INFO 1376 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4117 ms
+2019-06-26 16:59:01.136  INFO 1376 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-06-26 16:59:01.143  INFO 1376 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-06-26 16:59:01.144  INFO 1376 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-06-26 16:59:01.144  INFO 1376 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-06-26 16:59:01.145  INFO 1376 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-06-26 16:59:03.844  INFO 1376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3740fb10: startup date [Wed Jun 26 16:58:56 JST 2019]; root of context hierarchy
+2019-06-26 16:59:03.967  INFO 1376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/init],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.FileController.go()
+2019-06-26 16:59:03.971  INFO 1376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/getInfo],methods=[GET]}" onto public com.utils.AjaxJson com.controller.FileController.getInfoFile(javax.servlet.http.HttpServletRequest)
+2019-06-26 16:59:03.971  INFO 1376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/fileUpload],methods=[POST]}" onto public com.utils.AjaxJson com.controller.FileController.fileUpload(org.springframework.web.multipart.MultipartFile[],javax.servlet.http.HttpSession)
+2019-06-26 16:59:03.975  INFO 1376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/index],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.LoginController.index()
+2019-06-26 16:59:03.975  INFO 1376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/register],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.LoginController.register()
+2019-06-26 16:59:03.976  INFO 1376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/registered],methods=[POST]}" onto public com.utils.AjaxJson com.controller.LoginController.registered(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2019-06-26 16:59:03.976  INFO 1376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/getEmail],methods=[POST]}" onto public void com.controller.LoginController.getEmail(java.lang.String,javax.servlet.http.HttpSession)
+2019-06-26 16:59:03.976  INFO 1376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/success],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.LoginController.success()
+2019-06-26 16:59:03.977  INFO 1376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/showInfo],methods=[GET]}" onto public com.db.tables.pojos.MUsers com.controller.LoginController.showInfo(javax.servlet.http.HttpSession)
+2019-06-26 16:59:03.977  INFO 1376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/loginSubmit],methods=[POST]}" onto public com.utils.AjaxJson com.controller.LoginController.loginFlg(java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2019-06-26 16:59:03.978  INFO 1376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/getInfo],methods=[GET]}" onto public com.utils.AjaxJson com.controller.PageController.getInfo(int,int)
+2019-06-26 16:59:03.979  INFO 1376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/goPage],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.PageController.goPage()
+2019-06-26 16:59:03.982  INFO 1376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index11],methods=[GET]}" onto public int com.controller.TestController.count()
+2019-06-26 16:59:03.983  INFO 1376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index21],methods=[GET]}" onto public java.lang.String com.controller.TestController.test()
+2019-06-26 16:59:03.989  INFO 1376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index31],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.TestController.test3()
+2019-06-26 16:59:03.990  INFO 1376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index4],methods=[GET]}" onto public com.db.tables.pojos.MUsers com.controller.TestController.test4()
+2019-06-26 16:59:03.993  INFO 1376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-06-26 16:59:03.994  INFO 1376 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-06-26 16:59:04.067  INFO 1376 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/pic/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-26 16:59:04.068  INFO 1376 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-26 16:59:04.068  INFO 1376 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-26 16:59:04.172  INFO 1376 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-26 16:59:04.304  INFO 1376 --- [restartedMain] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2019-06-26 16:59:04.581  INFO 1376 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2019-06-26 16:59:04.938  INFO 1376 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-06-26 16:59:05.321  INFO 1376 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-06-26 16:59:05.419  INFO 1376 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2019-06-26 16:59:05.427  INFO 1376 --- [restartedMain] com.CcApplication                        : Started CcApplication in 10.068 seconds (JVM running for 15.85)
+2019-06-26 16:59:10.147  INFO 1376 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-06-26 16:59:10.148  INFO 1376 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-06-26 16:59:10.196  INFO 1376 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 48 ms
+2019-06-26 16:59:11.051  INFO 1376 --- [http-nio-8080-exec-7] org.jooq.Constants                       : 
+                                      
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@  @@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@        @@  @  @  @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@  @@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Thank you for using jOOQ 3.9.6
+                                      
+2019-06-26 16:59:16.811  INFO 1376 --- [Thread-28] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3740fb10: startup date [Wed Jun 26 16:58:56 JST 2019]; root of context hierarchy
+2019-06-26 16:59:16.817  INFO 1376 --- [Thread-28] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-06-26 17:00:15.853  INFO 5636 --- [restartedMain] com.CcApplication                        : Starting CcApplication on WIN-JDOPIOPKF8K with PID 5636 (D:\c-cc\m-cc\target\classes started by Huynh in D:\c-cc\m-cc)
+2019-06-26 17:00:15.855  INFO 5636 --- [restartedMain] com.CcApplication                        : No active profile set, falling back to default profiles: default
+2019-06-26 17:00:16.811  INFO 5636 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5dfdff1: startup date [Wed Jun 26 17:00:16 JST 2019]; root of context hierarchy
+2019-06-26 17:00:22.221  INFO 5636 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-06-26 17:00:22.240  INFO 5636 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-26 17:00:22.241  INFO 5636 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2019-06-26 17:00:22.396  INFO 5636 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-26 17:00:22.397  INFO 5636 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5585 ms
+2019-06-26 17:00:22.713  INFO 5636 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-06-26 17:00:22.719  INFO 5636 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-06-26 17:00:22.720  INFO 5636 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-06-26 17:00:22.721  INFO 5636 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-06-26 17:00:22.721  INFO 5636 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-06-26 17:00:25.100  INFO 5636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5dfdff1: startup date [Wed Jun 26 17:00:16 JST 2019]; root of context hierarchy
+2019-06-26 17:00:25.223  INFO 5636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/init],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.FileController.go()
+2019-06-26 17:00:25.227  INFO 5636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/getInfo],methods=[GET]}" onto public com.utils.AjaxJson com.controller.FileController.getInfoFile(javax.servlet.http.HttpServletRequest)
+2019-06-26 17:00:25.228  INFO 5636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/fileUpload],methods=[POST]}" onto public com.utils.AjaxJson com.controller.FileController.fileUpload(org.springframework.web.multipart.MultipartFile[],javax.servlet.http.HttpSession)
+2019-06-26 17:00:25.234  INFO 5636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/index],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.LoginController.index()
+2019-06-26 17:00:25.234  INFO 5636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/register],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.LoginController.register()
+2019-06-26 17:00:25.235  INFO 5636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/registered],methods=[POST]}" onto public com.utils.AjaxJson com.controller.LoginController.registered(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2019-06-26 17:00:25.236  INFO 5636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/loginSubmit],methods=[POST]}" onto public com.utils.AjaxJson com.controller.LoginController.loginFlg(java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2019-06-26 17:00:25.236  INFO 5636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/success],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.LoginController.success()
+2019-06-26 17:00:25.237  INFO 5636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/getEmail],methods=[POST]}" onto public void com.controller.LoginController.getEmail(java.lang.String,javax.servlet.http.HttpSession)
+2019-06-26 17:00:25.237  INFO 5636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/showInfo],methods=[GET]}" onto public com.db.tables.pojos.MUsers com.controller.LoginController.showInfo(javax.servlet.http.HttpSession)
+2019-06-26 17:00:25.239  INFO 5636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/getInfo],methods=[GET]}" onto public com.utils.AjaxJson com.controller.PageController.getInfo(int,int)
+2019-06-26 17:00:25.240  INFO 5636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/goPage],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.PageController.goPage()
+2019-06-26 17:00:25.243  INFO 5636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index11],methods=[GET]}" onto public int com.controller.TestController.count()
+2019-06-26 17:00:25.244  INFO 5636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index21],methods=[GET]}" onto public java.lang.String com.controller.TestController.test()
+2019-06-26 17:00:25.245  INFO 5636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index4],methods=[GET]}" onto public com.db.tables.pojos.MUsers com.controller.TestController.test4()
+2019-06-26 17:00:25.245  INFO 5636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index31],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.TestController.test3()
+2019-06-26 17:00:25.249  INFO 5636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-06-26 17:00:25.253  INFO 5636 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-06-26 17:00:25.323  INFO 5636 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/pic/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-26 17:00:25.324  INFO 5636 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-26 17:00:25.324  INFO 5636 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-26 17:00:25.410  INFO 5636 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-26 17:00:25.549  INFO 5636 --- [restartedMain] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2019-06-26 17:00:25.821  INFO 5636 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2019-06-26 17:00:26.179  INFO 5636 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-06-26 17:00:26.554  INFO 5636 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-06-26 17:00:26.660  INFO 5636 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2019-06-26 17:00:26.670  INFO 5636 --- [restartedMain] com.CcApplication                        : Started CcApplication in 12.476 seconds (JVM running for 14.485)
+2019-06-26 17:00:37.787  INFO 5636 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-06-26 17:00:37.788  INFO 5636 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-06-26 17:00:37.835  INFO 5636 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 46 ms
+2019-06-26 17:00:38.669  INFO 5636 --- [http-nio-8080-exec-3] org.jooq.Constants                       : 
+                                      
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@  @@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@        @@  @  @  @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@  @@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Thank you for using jOOQ 3.9.6
+                                      
+2019-06-26 17:00:42.954  INFO 5636 --- [Thread-30] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5dfdff1: startup date [Wed Jun 26 17:00:16 JST 2019]; root of context hierarchy
+2019-06-26 17:00:42.963  INFO 5636 --- [Thread-30] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
