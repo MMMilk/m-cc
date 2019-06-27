@@ -46,11 +46,19 @@ fileApp.controller("fileCtrl",function ($scope,$http) {
 });
 
 
+function excelDown() {
+    $.ajax({
+        type: "post",
+        url: "/file/excelDown",
+        dataType: "json",
+        async: true,
+        success: function () {
+            alert("-----------------");
+        },
+        error: function () {
+            alert("====================");
+        }
+    })
 
-/*var fileGetApp = angular.module("fileGetApp",[]);
-fileGetApp.controller("fileGetCtl",function ($scope,$http) {
-    alert("111111");
-})*/
-
-
+}
 

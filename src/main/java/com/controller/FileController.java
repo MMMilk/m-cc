@@ -6,6 +6,7 @@ import com.interceptor.Auth;
 import com.service.FileService;
 import com.utils.AjaxJson;
 import com.utils.CommonUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+@Slf4j
 @RestController
 @RequestMapping("/file")
 public class FileController {
@@ -22,7 +24,7 @@ public class FileController {
     @Autowired
     private FileService fileService;
 
-    @Auth
+    //@Auth
     @RequestMapping(value = "/init",method = RequestMethod.GET)
     public ModelAndView go(){
         return new ModelAndView("file");
@@ -46,5 +48,13 @@ public class FileController {
         AjaxJson ajaxJson = new AjaxJson();
         ajaxJson.setObj(fileService.getFileInfo(request.getContextPath()));
         return ajaxJson;
+    }
+
+
+    @RequestMapping(value="/excelDown",method = RequestMethod.POST)
+    public String download(){
+        log.info("====================下载文件开始了=============================");
+        fileService.downLoad();
+        return "";
     }
 }

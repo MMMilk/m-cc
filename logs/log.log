@@ -3966,3 +3966,483 @@ org.xml.sax.SAXParseException: 要素のコンテンツは、整形式の文字�
 2019-06-27 09:35:05.821  INFO 3656 --- [http-nio-8080-exec-3] com.utils.AuthUtil                       : ======================是否登录验证开始===============
 2019-06-27 09:35:08.907  INFO 3656 --- [Thread-31] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@366779cc: startup date [Thu Jun 27 09:33:32 JST 2019]; root of context hierarchy
 2019-06-27 09:35:08.913  INFO 3656 --- [Thread-31] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-06-27 11:47:29.557  INFO 5704 --- [restartedMain] com.CcApplication                        : Starting CcApplication on WIN-JDOPIOPKF8K with PID 5704 (D:\c-cc\m-cc\target\classes started by Huynh in D:\c-cc\m-cc)
+2019-06-27 11:47:29.557  INFO 5704 --- [restartedMain] com.CcApplication                        : No active profile set, falling back to default profiles: default
+2019-06-27 11:47:30.360  INFO 5704 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3986824e: startup date [Thu Jun 27 11:47:30 JST 2019]; root of context hierarchy
+2019-06-27 11:47:34.236  INFO 5704 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-06-27 11:47:34.251  INFO 5704 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-27 11:47:34.267  INFO 5704 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2019-06-27 11:47:35.095  INFO 5704 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-27 11:47:35.095  INFO 5704 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4736 ms
+2019-06-27 11:47:35.532  INFO 5704 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-06-27 11:47:35.532  INFO 5704 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-06-27 11:47:35.548  INFO 5704 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-06-27 11:47:35.548  INFO 5704 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-06-27 11:47:35.548  INFO 5704 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-06-27 11:47:38.438  INFO 5704 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3986824e: startup date [Thu Jun 27 11:47:30 JST 2019]; root of context hierarchy
+2019-06-27 11:47:38.519  INFO 5704 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/init],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.FileController.go()
+2019-06-27 11:47:38.523  INFO 5704 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/getInfo],methods=[GET]}" onto public com.utils.AjaxJson com.controller.FileController.getInfoFile(javax.servlet.http.HttpServletRequest)
+2019-06-27 11:47:38.523  INFO 5704 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/fileUpload],methods=[POST]}" onto public com.utils.AjaxJson com.controller.FileController.fileUpload(org.springframework.web.multipart.MultipartFile[],javax.servlet.http.HttpSession)
+2019-06-27 11:47:38.527  INFO 5704 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/index],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.LoginController.index()
+2019-06-27 11:47:38.527  INFO 5704 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/register],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.LoginController.register()
+2019-06-27 11:47:38.528  INFO 5704 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/registered],methods=[POST]}" onto public com.utils.AjaxJson com.controller.LoginController.registered(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2019-06-27 11:47:38.528  INFO 5704 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/success],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.LoginController.success()
+2019-06-27 11:47:38.530  INFO 5704 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/loginSubmit],methods=[POST]}" onto public com.utils.AjaxJson com.controller.LoginController.loginFlg(java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2019-06-27 11:47:38.530  INFO 5704 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/getEmail],methods=[POST]}" onto public void com.controller.LoginController.getEmail(java.lang.String,javax.servlet.http.HttpSession)
+2019-06-27 11:47:38.530  INFO 5704 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/showInfo],methods=[GET]}" onto public com.db.tables.pojos.MUsers com.controller.LoginController.showInfo(javax.servlet.http.HttpSession)
+2019-06-27 11:47:38.532  INFO 5704 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/getInfo],methods=[GET]}" onto public com.utils.AjaxJson com.controller.PageController.getInfo(int,int)
+2019-06-27 11:47:38.532  INFO 5704 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/goPage],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.PageController.goPage()
+2019-06-27 11:47:38.548  INFO 5704 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index11],methods=[GET]}" onto public int com.controller.TestController.count()
+2019-06-27 11:47:38.549  INFO 5704 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index21],methods=[GET]}" onto public java.lang.String com.controller.TestController.test()
+2019-06-27 11:47:38.550  INFO 5704 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index31],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.TestController.test3()
+2019-06-27 11:47:38.551  INFO 5704 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index4],methods=[GET]}" onto public com.db.tables.pojos.MUsers com.controller.TestController.test4()
+2019-06-27 11:47:38.554  INFO 5704 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-06-27 11:47:38.555  INFO 5704 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-06-27 11:47:38.602  INFO 5704 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/pic/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-27 11:47:38.603  INFO 5704 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-27 11:47:38.603  INFO 5704 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-27 11:47:38.661  INFO 5704 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-27 11:47:38.762  INFO 5704 --- [restartedMain] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2019-06-27 11:47:38.937  INFO 5704 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2019-06-27 11:47:39.187  INFO 5704 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-06-27 11:47:39.327  INFO 5704 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-06-27 11:47:39.405  INFO 5704 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2019-06-27 11:47:39.421  INFO 5704 --- [restartedMain] com.CcApplication                        : Started CcApplication in 10.895 seconds (JVM running for 12.997)
+2019-06-27 11:48:01.444  INFO 5704 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-06-27 11:48:01.444  INFO 5704 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-06-27 11:48:01.480  INFO 5704 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 36 ms
+2019-06-27 11:48:01.503  INFO 5704 --- [http-nio-8080-exec-1] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 11:48:29.518  INFO 5704 --- [http-nio-8080-exec-6] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 11:48:32.004  INFO 5704 --- [http-nio-8080-exec-1] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 11:49:16.810  INFO 5704 --- [http-nio-8080-exec-5] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 11:49:16.935  INFO 5704 --- [http-nio-8080-exec-5] org.jooq.Constants                       : 
+                                      
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@  @@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@        @@  @  @  @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@  @@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Thank you for using jOOQ 3.9.6
+                                      
+2019-06-27 11:49:22.602  INFO 5704 --- [http-nio-8080-exec-3] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 11:49:34.817  INFO 5704 --- [http-nio-8080-exec-7] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 11:49:35.318  INFO 5704 --- [http-nio-8080-exec-1] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 11:49:35.687  INFO 5704 --- [http-nio-8080-exec-4] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 11:49:41.479  INFO 5704 --- [http-nio-8080-exec-6] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 11:49:41.674  INFO 5704 --- [http-nio-8080-exec-1] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 11:49:41.714  INFO 5704 --- [http-nio-8080-exec-2] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:02:48.085  INFO 3780 --- [restartedMain] com.CcApplication                        : Starting CcApplication on WIN-JDOPIOPKF8K with PID 3780 (D:\c-cc\m-cc\target\classes started by Huynh in D:\c-cc\m-cc)
+2019-06-27 13:02:48.087  INFO 3780 --- [restartedMain] com.CcApplication                        : No active profile set, falling back to default profiles: default
+2019-06-27 13:02:49.127  INFO 3780 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@31907d4d: startup date [Thu Jun 27 13:02:49 JST 2019]; root of context hierarchy
+2019-06-27 13:02:55.669  INFO 3780 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-06-27 13:02:55.692  INFO 3780 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-27 13:02:55.694  INFO 3780 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2019-06-27 13:02:57.302  INFO 3780 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-27 13:02:57.304  INFO 3780 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 8177 ms
+2019-06-27 13:02:57.542  INFO 3780 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-06-27 13:02:57.547  INFO 3780 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-06-27 13:02:57.549  INFO 3780 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-06-27 13:02:57.549  INFO 3780 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-06-27 13:02:57.550  INFO 3780 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-06-27 13:03:02.632  INFO 3780 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@31907d4d: startup date [Thu Jun 27 13:02:49 JST 2019]; root of context hierarchy
+2019-06-27 13:03:02.716  INFO 3780 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/init],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.FileController.go()
+2019-06-27 13:03:02.719  INFO 3780 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/getInfo],methods=[GET]}" onto public com.utils.AjaxJson com.controller.FileController.getInfoFile(javax.servlet.http.HttpServletRequest)
+2019-06-27 13:03:02.720  INFO 3780 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/fileUpload],methods=[POST]}" onto public com.utils.AjaxJson com.controller.FileController.fileUpload(org.springframework.web.multipart.MultipartFile[],javax.servlet.http.HttpSession)
+2019-06-27 13:03:02.723  INFO 3780 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/index],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.LoginController.index()
+2019-06-27 13:03:02.724  INFO 3780 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/register],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.LoginController.register()
+2019-06-27 13:03:02.725  INFO 3780 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/registered],methods=[POST]}" onto public com.utils.AjaxJson com.controller.LoginController.registered(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2019-06-27 13:03:02.725  INFO 3780 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/success],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.LoginController.success()
+2019-06-27 13:03:02.726  INFO 3780 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/getEmail],methods=[POST]}" onto public void com.controller.LoginController.getEmail(java.lang.String,javax.servlet.http.HttpSession)
+2019-06-27 13:03:02.726  INFO 3780 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/showInfo],methods=[GET]}" onto public com.db.tables.pojos.MUsers com.controller.LoginController.showInfo(javax.servlet.http.HttpSession)
+2019-06-27 13:03:02.726  INFO 3780 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/loginSubmit],methods=[POST]}" onto public com.utils.AjaxJson com.controller.LoginController.loginFlg(java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2019-06-27 13:03:02.728  INFO 3780 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/getInfo],methods=[GET]}" onto public com.utils.AjaxJson com.controller.PageController.getInfo(int,int)
+2019-06-27 13:03:02.728  INFO 3780 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/goPage],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.PageController.goPage()
+2019-06-27 13:03:02.732  INFO 3780 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index11],methods=[GET]}" onto public int com.controller.TestController.count()
+2019-06-27 13:03:02.733  INFO 3780 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index21],methods=[GET]}" onto public java.lang.String com.controller.TestController.test()
+2019-06-27 13:03:02.733  INFO 3780 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index31],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.TestController.test3()
+2019-06-27 13:03:02.733  INFO 3780 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index4],methods=[GET]}" onto public com.db.tables.pojos.MUsers com.controller.TestController.test4()
+2019-06-27 13:03:02.737  INFO 3780 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-06-27 13:03:02.738  INFO 3780 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-06-27 13:03:02.787  INFO 3780 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/pic/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-27 13:03:02.788  INFO 3780 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-27 13:03:02.788  INFO 3780 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-27 13:03:02.847  INFO 3780 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-27 13:03:02.990  INFO 3780 --- [restartedMain] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2019-06-27 13:03:03.193  INFO 3780 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2019-06-27 13:03:03.483  INFO 3780 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-06-27 13:03:03.633  INFO 3780 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-06-27 13:03:03.741  INFO 3780 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2019-06-27 13:03:03.750  INFO 3780 --- [restartedMain] com.CcApplication                        : Started CcApplication in 16.478 seconds (JVM running for 20.3)
+2019-06-27 13:03:15.858  INFO 3780 --- [http-nio-8080-exec-10] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-06-27 13:03:15.859  INFO 3780 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-06-27 13:03:15.892  INFO 3780 --- [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 33 ms
+2019-06-27 13:03:15.915  INFO 3780 --- [http-nio-8080-exec-10] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:03:16.351  INFO 3780 --- [http-nio-8080-exec-1] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:03:16.613  INFO 3780 --- [http-nio-8080-exec-1] org.jooq.Constants                       : 
+                                      
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@  @@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@        @@  @  @  @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@  @@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Thank you for using jOOQ 3.9.6
+                                      
+2019-06-27 13:03:17.180  INFO 3780 --- [http-nio-8080-exec-9] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:03:48.866  INFO 3780 --- [http-nio-8080-exec-7] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:03:49.096  INFO 3780 --- [http-nio-8080-exec-4] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:03:49.129  INFO 3780 --- [http-nio-8080-exec-8] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:03:49.572  INFO 3780 --- [http-nio-8080-exec-1] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:03:49.705  INFO 3780 --- [http-nio-8080-exec-3] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:03:49.729  INFO 3780 --- [http-nio-8080-exec-5] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:03:50.481  INFO 3780 --- [http-nio-8080-exec-8] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:03:50.663  INFO 3780 --- [http-nio-8080-exec-10] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:03:50.721  INFO 3780 --- [http-nio-8080-exec-3] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:03:51.098  INFO 3780 --- [http-nio-8080-exec-5] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:03:51.367  INFO 3780 --- [http-nio-8080-exec-6] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:03:51.403  INFO 3780 --- [http-nio-8080-exec-7] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:03:51.832  INFO 3780 --- [http-nio-8080-exec-9] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:03:52.136  INFO 3780 --- [http-nio-8080-exec-1] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:03:52.155  INFO 3780 --- [http-nio-8080-exec-10] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:03:52.489  INFO 3780 --- [http-nio-8080-exec-6] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:03:52.754  INFO 3780 --- [http-nio-8080-exec-8] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:03:52.772  INFO 3780 --- [http-nio-8080-exec-4] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:03:53.324  INFO 3780 --- [http-nio-8080-exec-1] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:03:53.524  INFO 3780 --- [http-nio-8080-exec-3] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:03:53.566  INFO 3780 --- [http-nio-8080-exec-2] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:03:54.006  INFO 3780 --- [http-nio-8080-exec-8] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:03:54.250  INFO 3780 --- [http-nio-8080-exec-9] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:03:54.278  INFO 3780 --- [http-nio-8080-exec-3] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:03:54.678  INFO 3780 --- [http-nio-8080-exec-5] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:03:55.130  INFO 3780 --- [http-nio-8080-exec-7] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:03:55.156  INFO 3780 --- [http-nio-8080-exec-10] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:04:01.306  INFO 3780 --- [http-nio-8080-exec-9] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:04:16.244  INFO 3780 --- [http-nio-8080-exec-3] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:04:16.484  INFO 3780 --- [http-nio-8080-exec-4] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:04:16.487  INFO 3780 --- [http-nio-8080-exec-4] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:04:16.532  INFO 3780 --- [http-nio-8080-exec-10] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:04:16.865  INFO 3780 --- [http-nio-8080-exec-9] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:04:17.066  INFO 3780 --- [http-nio-8080-exec-6] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:04:17.135  INFO 3780 --- [http-nio-8080-exec-7] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:04:17.159  INFO 3780 --- [http-nio-8080-exec-1] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:04:17.549  INFO 3780 --- [http-nio-8080-exec-10] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:04:17.715  INFO 3780 --- [http-nio-8080-exec-2] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:04:17.795  INFO 3780 --- [http-nio-8080-exec-5] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:04:17.835  INFO 3780 --- [http-nio-8080-exec-7] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:04:18.075  INFO 3780 --- [http-nio-8080-exec-1] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:04:18.332  INFO 3780 --- [http-nio-8080-exec-6] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:04:18.358  INFO 3780 --- [http-nio-8080-exec-2] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:04:18.387  INFO 3780 --- [http-nio-8080-exec-4] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:04:18.703  INFO 3780 --- [http-nio-8080-exec-7] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:04:22.617  INFO 3780 --- [http-nio-8080-exec-5] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:04:24.381  INFO 3780 --- [http-nio-8080-exec-1] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:04:26.129  INFO 3780 --- [http-nio-8080-exec-3] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:04:26.398  INFO 3780 --- [http-nio-8080-exec-8] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:04:26.403  INFO 3780 --- [http-nio-8080-exec-5] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:04:26.438  INFO 3780 --- [http-nio-8080-exec-7] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:23:18.776  INFO 5700 --- [restartedMain] com.CcApplication                        : Starting CcApplication on WIN-JDOPIOPKF8K with PID 5700 (D:\c-cc\m-cc\target\classes started by Huynh in D:\c-cc\m-cc)
+2019-06-27 13:23:18.778  INFO 5700 --- [restartedMain] com.CcApplication                        : No active profile set, falling back to default profiles: default
+2019-06-27 13:23:19.266  INFO 5700 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@daf3b0: startup date [Thu Jun 27 13:23:19 JST 2019]; root of context hierarchy
+2019-06-27 13:23:22.761  INFO 5700 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-06-27 13:23:22.777  INFO 5700 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-27 13:23:22.778  INFO 5700 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2019-06-27 13:23:22.891  INFO 5700 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-27 13:23:22.893  INFO 5700 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3627 ms
+2019-06-27 13:23:23.129  INFO 5700 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-06-27 13:23:23.134  INFO 5700 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-06-27 13:23:23.135  INFO 5700 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-06-27 13:23:23.135  INFO 5700 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-06-27 13:23:23.136  INFO 5700 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-06-27 13:23:25.228  INFO 5700 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@daf3b0: startup date [Thu Jun 27 13:23:19 JST 2019]; root of context hierarchy
+2019-06-27 13:23:25.311  INFO 5700 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/init],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.FileController.go()
+2019-06-27 13:23:25.315  INFO 5700 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/getInfo],methods=[GET]}" onto public com.utils.AjaxJson com.controller.FileController.getInfoFile(javax.servlet.http.HttpServletRequest)
+2019-06-27 13:23:25.316  INFO 5700 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/excelDown],methods=[POST]}" onto public java.lang.String com.controller.FileController.download()
+2019-06-27 13:23:25.317  INFO 5700 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/fileUpload],methods=[POST]}" onto public com.utils.AjaxJson com.controller.FileController.fileUpload(org.springframework.web.multipart.MultipartFile[],javax.servlet.http.HttpSession)
+2019-06-27 13:23:25.321  INFO 5700 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/index],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.LoginController.index()
+2019-06-27 13:23:25.321  INFO 5700 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/register],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.LoginController.register()
+2019-06-27 13:23:25.322  INFO 5700 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/registered],methods=[POST]}" onto public com.utils.AjaxJson com.controller.LoginController.registered(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2019-06-27 13:23:25.322  INFO 5700 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/success],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.LoginController.success()
+2019-06-27 13:23:25.323  INFO 5700 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/showInfo],methods=[GET]}" onto public com.db.tables.pojos.MUsers com.controller.LoginController.showInfo(javax.servlet.http.HttpSession)
+2019-06-27 13:23:25.324  INFO 5700 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/getEmail],methods=[POST]}" onto public void com.controller.LoginController.getEmail(java.lang.String,javax.servlet.http.HttpSession)
+2019-06-27 13:23:25.324  INFO 5700 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/loginSubmit],methods=[POST]}" onto public com.utils.AjaxJson com.controller.LoginController.loginFlg(java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2019-06-27 13:23:25.325  INFO 5700 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/getInfo],methods=[GET]}" onto public com.utils.AjaxJson com.controller.PageController.getInfo(int,int)
+2019-06-27 13:23:25.326  INFO 5700 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/goPage],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.PageController.goPage()
+2019-06-27 13:23:25.329  INFO 5700 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index11],methods=[GET]}" onto public int com.controller.TestController.count()
+2019-06-27 13:23:25.330  INFO 5700 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index21],methods=[GET]}" onto public java.lang.String com.controller.TestController.test()
+2019-06-27 13:23:25.332  INFO 5700 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index4],methods=[GET]}" onto public com.db.tables.pojos.MUsers com.controller.TestController.test4()
+2019-06-27 13:23:25.336  INFO 5700 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index31],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.TestController.test3()
+2019-06-27 13:23:25.341  INFO 5700 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-06-27 13:23:25.342  INFO 5700 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-06-27 13:23:25.394  INFO 5700 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/pic/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-27 13:23:25.395  INFO 5700 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-27 13:23:25.395  INFO 5700 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-27 13:23:25.458  INFO 5700 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-27 13:23:25.567  INFO 5700 --- [restartedMain] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2019-06-27 13:23:25.763  INFO 5700 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2019-06-27 13:23:26.018  INFO 5700 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-06-27 13:23:26.156  INFO 5700 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-06-27 13:23:26.238  INFO 5700 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2019-06-27 13:23:26.247  INFO 5700 --- [restartedMain] com.CcApplication                        : Started CcApplication in 8.082 seconds (JVM running for 15.662)
+2019-06-27 13:23:48.676  INFO 5700 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-06-27 13:23:48.677  INFO 5700 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-06-27 13:23:48.718  INFO 5700 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 41 ms
+2019-06-27 13:23:48.744  INFO 5700 --- [http-nio-8080-exec-2] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:23:50.698  INFO 5700 --- [http-nio-8080-exec-9] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:23:51.047  INFO 5700 --- [http-nio-8080-exec-7] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:23:51.530  INFO 5700 --- [http-nio-8080-exec-7] org.jooq.Constants                       : 
+                                      
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@  @@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@        @@  @  @  @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@  @@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Thank you for using jOOQ 3.9.6
+                                      
+2019-06-27 13:23:52.317  INFO 5700 --- [http-nio-8080-exec-3] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:23:52.840  INFO 5700 --- [http-nio-8080-exec-1] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:23:53.333  INFO 5700 --- [http-nio-8080-exec-4] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:23:53.348  INFO 5700 --- [http-nio-8080-exec-4] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:23:53.455  INFO 5700 --- [http-nio-8080-exec-7] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:23:54.664  WARN 5700 --- [http-nio-8080-exec-3] o.s.web.servlet.PageNotFound             : Request method 'GET' not supported
+2019-06-27 13:23:54.665  WARN 5700 --- [http-nio-8080-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved exception caused by Handler execution: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2019-06-27 13:23:54.667  INFO 5700 --- [http-nio-8080-exec-3] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:26:01.437  INFO 5700 --- [Thread-23] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@daf3b0: startup date [Thu Jun 27 13:23:19 JST 2019]; root of context hierarchy
+2019-06-27 13:26:01.443  INFO 5700 --- [Thread-23] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2019-06-27 13:26:03.055  INFO 5700 --- [restartedMain] com.CcApplication                        : Starting CcApplication on WIN-JDOPIOPKF8K with PID 5700 (D:\c-cc\m-cc\target\classes started by Huynh in D:\c-cc\m-cc)
+2019-06-27 13:26:03.055  INFO 5700 --- [restartedMain] com.CcApplication                        : No active profile set, falling back to default profiles: default
+2019-06-27 13:26:03.060  INFO 5700 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7c3780ef: startup date [Thu Jun 27 13:26:03 JST 2019]; root of context hierarchy
+2019-06-27 13:26:09.874  INFO 5700 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-06-27 13:26:09.880  INFO 5700 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-27 13:26:09.880  INFO 5700 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2019-06-27 13:26:09.923  INFO 5700 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-27 13:26:09.925  INFO 5700 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6865 ms
+2019-06-27 13:26:10.059  INFO 5700 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-06-27 13:26:10.061  INFO 5700 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-06-27 13:26:10.061  INFO 5700 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-06-27 13:26:10.061  INFO 5700 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-06-27 13:26:10.061  INFO 5700 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-06-27 13:26:10.346  WARN 5700 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fileController': Unsatisfied dependency expressed through field 'fileService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.service.FileService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-06-27 13:26:10.348  INFO 5700 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-06-27 13:26:10.388  INFO 5700 --- [restartedMain] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2019-06-27 13:26:12.763 ERROR 5700 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field fileService in com.controller.FileController required a bean of type 'com.service.FileService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.service.FileService' in your configuration.
+
+2019-06-27 13:26:39.132  INFO 4192 --- [restartedMain] com.CcApplication                        : Starting CcApplication on WIN-JDOPIOPKF8K with PID 4192 (D:\c-cc\m-cc\target\classes started by Huynh in D:\c-cc\m-cc)
+2019-06-27 13:26:39.134  INFO 4192 --- [restartedMain] com.CcApplication                        : No active profile set, falling back to default profiles: default
+2019-06-27 13:26:39.555  INFO 4192 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5e31d0ba: startup date [Thu Jun 27 13:26:39 JST 2019]; root of context hierarchy
+2019-06-27 13:26:45.131  INFO 4192 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-06-27 13:26:45.149  INFO 4192 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-27 13:26:45.151  INFO 4192 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2019-06-27 13:26:45.564  INFO 4192 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-27 13:26:45.565  INFO 4192 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6010 ms
+2019-06-27 13:26:45.953  INFO 4192 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-06-27 13:26:45.959  INFO 4192 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-06-27 13:26:45.960  INFO 4192 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-06-27 13:26:45.961  INFO 4192 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-06-27 13:26:45.961  INFO 4192 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-06-27 13:26:48.442  INFO 4192 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5e31d0ba: startup date [Thu Jun 27 13:26:39 JST 2019]; root of context hierarchy
+2019-06-27 13:26:48.531  INFO 4192 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/init],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.FileController.go()
+2019-06-27 13:26:48.533  INFO 4192 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/excelDown],methods=[POST]}" onto public java.lang.String com.controller.FileController.download()
+2019-06-27 13:26:48.536  INFO 4192 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/getInfo],methods=[GET]}" onto public com.utils.AjaxJson com.controller.FileController.getInfoFile(javax.servlet.http.HttpServletRequest)
+2019-06-27 13:26:48.536  INFO 4192 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/fileUpload],methods=[POST]}" onto public com.utils.AjaxJson com.controller.FileController.fileUpload(org.springframework.web.multipart.MultipartFile[],javax.servlet.http.HttpSession)
+2019-06-27 13:26:48.541  INFO 4192 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/index],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.LoginController.index()
+2019-06-27 13:26:48.542  INFO 4192 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/register],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.LoginController.register()
+2019-06-27 13:26:48.543  INFO 4192 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/registered],methods=[POST]}" onto public com.utils.AjaxJson com.controller.LoginController.registered(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2019-06-27 13:26:48.544  INFO 4192 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/loginSubmit],methods=[POST]}" onto public com.utils.AjaxJson com.controller.LoginController.loginFlg(java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2019-06-27 13:26:48.544  INFO 4192 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/showInfo],methods=[GET]}" onto public com.db.tables.pojos.MUsers com.controller.LoginController.showInfo(javax.servlet.http.HttpSession)
+2019-06-27 13:26:48.546  INFO 4192 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/success],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.LoginController.success()
+2019-06-27 13:26:48.546  INFO 4192 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/getEmail],methods=[POST]}" onto public void com.controller.LoginController.getEmail(java.lang.String,javax.servlet.http.HttpSession)
+2019-06-27 13:26:48.548  INFO 4192 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/getInfo],methods=[GET]}" onto public com.utils.AjaxJson com.controller.PageController.getInfo(int,int)
+2019-06-27 13:26:48.549  INFO 4192 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/goPage],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.PageController.goPage()
+2019-06-27 13:26:48.553  INFO 4192 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index11],methods=[GET]}" onto public int com.controller.TestController.count()
+2019-06-27 13:26:48.554  INFO 4192 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index21],methods=[GET]}" onto public java.lang.String com.controller.TestController.test()
+2019-06-27 13:26:48.554  INFO 4192 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index4],methods=[GET]}" onto public com.db.tables.pojos.MUsers com.controller.TestController.test4()
+2019-06-27 13:26:48.555  INFO 4192 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index31],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.TestController.test3()
+2019-06-27 13:26:48.558  INFO 4192 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-06-27 13:26:48.559  INFO 4192 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-06-27 13:26:48.609  INFO 4192 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/pic/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-27 13:26:48.609  INFO 4192 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-27 13:26:48.609  INFO 4192 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-27 13:26:48.677  INFO 4192 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-27 13:26:48.793  INFO 4192 --- [restartedMain] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2019-06-27 13:26:48.996  INFO 4192 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2019-06-27 13:26:49.275  INFO 4192 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-06-27 13:26:49.419  INFO 4192 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-06-27 13:26:49.511  INFO 4192 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2019-06-27 13:26:49.519  INFO 4192 --- [restartedMain] com.CcApplication                        : Started CcApplication in 11.051 seconds (JVM running for 13.608)
+2019-06-27 13:26:54.571  INFO 4192 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-06-27 13:26:54.572  INFO 4192 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-06-27 13:26:54.607  INFO 4192 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 35 ms
+2019-06-27 13:26:54.638  INFO 4192 --- [http-nio-8080-exec-1] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:26:55.441  INFO 4192 --- [http-nio-8080-exec-2] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:26:55.525  INFO 4192 --- [http-nio-8080-exec-4] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:26:55.860  INFO 4192 --- [http-nio-8080-exec-4] org.jooq.Constants                       : 
+                                      
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@  @@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@        @@  @  @  @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@  @@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Thank you for using jOOQ 3.9.6
+                                      
+2019-06-27 13:26:57.311  INFO 4192 --- [http-nio-8080-exec-8] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:26:59.118  WARN 4192 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : Request method 'GET' not supported
+2019-06-27 13:26:59.119  WARN 4192 --- [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved exception caused by Handler execution: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2019-06-27 13:26:59.121  INFO 4192 --- [http-nio-8080-exec-10] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:29:23.064  INFO 4340 --- [restartedMain] com.CcApplication                        : Starting CcApplication on WIN-JDOPIOPKF8K with PID 4340 (D:\c-cc\m-cc\target\classes started by Huynh in D:\c-cc\m-cc)
+2019-06-27 13:29:23.067  INFO 4340 --- [restartedMain] com.CcApplication                        : No active profile set, falling back to default profiles: default
+2019-06-27 13:29:23.588  INFO 4340 --- [restartedMain] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@701178eb: startup date [Thu Jun 27 13:29:23 JST 2019]; root of context hierarchy
+2019-06-27 13:29:28.819  INFO 4340 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2019-06-27 13:29:28.836  INFO 4340 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-06-27 13:29:28.837  INFO 4340 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.27
+2019-06-27 13:29:28.987  INFO 4340 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-06-27 13:29:28.988  INFO 4340 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5400 ms
+2019-06-27 13:29:29.296  INFO 4340 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2019-06-27 13:29:29.303  INFO 4340 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-06-27 13:29:29.305  INFO 4340 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-06-27 13:29:29.305  INFO 4340 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-06-27 13:29:29.305  INFO 4340 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-06-27 13:29:31.624  INFO 4340 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@701178eb: startup date [Thu Jun 27 13:29:23 JST 2019]; root of context hierarchy
+2019-06-27 13:29:31.742  INFO 4340 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/init],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.FileController.go()
+2019-06-27 13:29:31.747  INFO 4340 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/fileUpload],methods=[POST]}" onto public com.utils.AjaxJson com.controller.FileController.fileUpload(org.springframework.web.multipart.MultipartFile[],javax.servlet.http.HttpSession)
+2019-06-27 13:29:31.749  INFO 4340 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/getInfo],methods=[GET]}" onto public com.utils.AjaxJson com.controller.FileController.getInfoFile(javax.servlet.http.HttpServletRequest)
+2019-06-27 13:29:31.749  INFO 4340 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/file/excelDown],methods=[POST]}" onto public java.lang.String com.controller.FileController.download()
+2019-06-27 13:29:31.752  INFO 4340 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/index],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.LoginController.index()
+2019-06-27 13:29:31.753  INFO 4340 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/register],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.LoginController.register()
+2019-06-27 13:29:31.753  INFO 4340 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/registered],methods=[POST]}" onto public com.utils.AjaxJson com.controller.LoginController.registered(java.lang.String,java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2019-06-27 13:29:31.754  INFO 4340 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/loginSubmit],methods=[POST]}" onto public com.utils.AjaxJson com.controller.LoginController.loginFlg(java.lang.String,java.lang.String,javax.servlet.http.HttpSession)
+2019-06-27 13:29:31.754  INFO 4340 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/success],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.LoginController.success()
+2019-06-27 13:29:31.755  INFO 4340 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/showInfo],methods=[GET]}" onto public com.db.tables.pojos.MUsers com.controller.LoginController.showInfo(javax.servlet.http.HttpSession)
+2019-06-27 13:29:31.755  INFO 4340 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/login/getEmail],methods=[POST]}" onto public void com.controller.LoginController.getEmail(java.lang.String,javax.servlet.http.HttpSession)
+2019-06-27 13:29:31.756  INFO 4340 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/getInfo],methods=[GET]}" onto public com.utils.AjaxJson com.controller.PageController.getInfo(int,int)
+2019-06-27 13:29:31.757  INFO 4340 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/page/goPage],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.PageController.goPage()
+2019-06-27 13:29:31.761  INFO 4340 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index11],methods=[GET]}" onto public int com.controller.TestController.count()
+2019-06-27 13:29:31.762  INFO 4340 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index21],methods=[GET]}" onto public java.lang.String com.controller.TestController.test()
+2019-06-27 13:29:31.762  INFO 4340 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index31],methods=[GET]}" onto public org.springframework.web.servlet.ModelAndView com.controller.TestController.test3()
+2019-06-27 13:29:31.763  INFO 4340 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/index4],methods=[GET]}" onto public com.db.tables.pojos.MUsers com.controller.TestController.test4()
+2019-06-27 13:29:31.768  INFO 4340 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-06-27 13:29:31.769  INFO 4340 --- [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-06-27 13:29:31.842  INFO 4340 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/pic/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-27 13:29:31.843  INFO 4340 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-27 13:29:31.843  INFO 4340 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-27 13:29:31.936  INFO 4340 --- [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-06-27 13:29:32.070  INFO 4340 --- [restartedMain] oConfiguration$WelcomePageHandlerMapping : Adding welcome page: class path resource [static/index.html]
+2019-06-27 13:29:32.335  INFO 4340 --- [restartedMain] o.s.w.s.v.f.FreeMarkerConfigurer         : ClassTemplateLoader for Spring macros added to FreeMarker configuration
+2019-06-27 13:29:32.691  INFO 4340 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-06-27 13:29:33.064  INFO 4340 --- [restartedMain] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2019-06-27 13:29:33.165  INFO 4340 --- [restartedMain] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2019-06-27 13:29:33.175  INFO 4340 --- [restartedMain] com.CcApplication                        : Started CcApplication in 11.041 seconds (JVM running for 13.752)
+2019-06-27 13:29:37.864  INFO 4340 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-06-27 13:29:37.864  INFO 4340 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2019-06-27 13:29:37.916  INFO 4340 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 52 ms
+2019-06-27 13:29:37.949  INFO 4340 --- [http-nio-8080-exec-1] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:29:38.455  INFO 4340 --- [http-nio-8080-exec-4] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:29:38.738  INFO 4340 --- [http-nio-8080-exec-4] org.jooq.Constants                       : 
+                                      
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@  @@@@  @@  @@    @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@    @@  @@  @@@@  @@@@@@@@@@
+@@@@@@@@@@        @@  @  @  @@@@@@@@@@
+@@@@@@@@@@        @@        @@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@  @@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Thank you for using jOOQ 3.9.6
+                                      
+2019-06-27 13:29:39.355  INFO 4340 --- [http-nio-8080-exec-8] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:29:40.206  WARN 4340 --- [http-nio-8080-exec-10] o.s.web.servlet.PageNotFound             : Request method 'GET' not supported
+2019-06-27 13:29:40.207  WARN 4340 --- [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved exception caused by Handler execution: org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported
+2019-06-27 13:29:40.216  INFO 4340 --- [http-nio-8080-exec-10] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:30:06.035  INFO 4340 --- [http-nio-8080-exec-2] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:30:06.205  INFO 4340 --- [http-nio-8080-exec-3] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:30:06.238  INFO 4340 --- [http-nio-8080-exec-4] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:30:06.336  INFO 4340 --- [http-nio-8080-exec-8] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:30:06.471  INFO 4340 --- [http-nio-8080-exec-1] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:30:06.539  INFO 4340 --- [http-nio-8080-exec-6] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:30:06.786  INFO 4340 --- [http-nio-8080-exec-3] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:30:08.195  INFO 4340 --- [http-nio-8080-exec-4] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:30:08.523  INFO 4340 --- [http-nio-8080-exec-10] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:30:08.662  INFO 4340 --- [http-nio-8080-exec-1] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:30:09.201  INFO 4340 --- [http-nio-8080-exec-2] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:30:09.221  INFO 4340 --- [http-nio-8080-exec-2] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:30:09.258  INFO 4340 --- [http-nio-8080-exec-10] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:30:09.452  INFO 4340 --- [http-nio-8080-exec-4] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:30:09.509  INFO 4340 --- [http-nio-8080-exec-8] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:30:09.549  INFO 4340 --- [http-nio-8080-exec-2] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:30:09.801  INFO 4340 --- [http-nio-8080-exec-6] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:30:09.871  INFO 4340 --- [http-nio-8080-exec-3] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:30:09.915  INFO 4340 --- [http-nio-8080-exec-4] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:30:10.207  INFO 4340 --- [http-nio-8080-exec-5] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:30:10.364  INFO 4340 --- [http-nio-8080-exec-6] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:30:10.453  INFO 4340 --- [http-nio-8080-exec-6] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:30:10.727  INFO 4340 --- [http-nio-8080-exec-9] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:30:10.777  INFO 4340 --- [http-nio-8080-exec-10] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:30:11.730  INFO 4340 --- [http-nio-8080-exec-5] com.utils.AuthUtil                       : ======================是否登录验证开始===============
+2019-06-27 13:30:11.744  INFO 4340 --- [http-nio-8080-exec-5] com.controller.FileController            : ====================下载文件开始了=============================
+2019-06-27 13:31:21.067  INFO 4340 --- [Thread-31] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@701178eb: startup date [Thu Jun 27 13:29:23 JST 2019]; root of context hierarchy
+2019-06-27 13:31:21.072  INFO 4340 --- [Thread-31] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
