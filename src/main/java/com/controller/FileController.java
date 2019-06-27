@@ -31,6 +31,7 @@ public class FileController {
     }
 
 
+    //图片上传
     @RequestMapping(value = "/fileUpload",method = RequestMethod.POST)
     @ResponseBody
     @Transactional
@@ -43,6 +44,7 @@ public class FileController {
     }
 
 
+    //获取图片展示
     @RequestMapping(value = "/getInfo",method = RequestMethod.GET)
     public AjaxJson getInfoFile(HttpServletRequest request){
         AjaxJson ajaxJson = new AjaxJson();
@@ -51,10 +53,19 @@ public class FileController {
     }
 
 
+    //excel下载
     @RequestMapping(value="/excelDown",method = RequestMethod.POST)
-    public String download(){
-        log.info("====================下载文件开始了=============================");
-        fileService.downLoad();
+    public String downloadExcel(){
+        log.info("====================excel下载文件开始了=============================");
+        fileService.downLoadExcel();
+        return "";
+    }
+
+    //zip压缩包下载
+    @RequestMapping(value="/zipDown",method = RequestMethod.POST)
+    public String downloadZip(){
+        log.info("====================zip下载文件开始了=============================");
+        fileService.downloadZip();
         return "";
     }
 }

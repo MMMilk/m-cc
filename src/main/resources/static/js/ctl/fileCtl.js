@@ -46,6 +46,7 @@ fileApp.controller("fileCtrl",function ($scope,$http) {
 });
 
 
+//excel下载
 function excelDown() {
     $.ajax({
         type: "post",
@@ -53,12 +54,26 @@ function excelDown() {
         dataType: "json",
         async: true,
         success: function () {
-            alert("-----------------");
+            alert("-----------------excel");
         },
         error: function () {
-            alert("====================");
+            alert("====================excel");
         }
     })
-
 }
 
+
+//文件压缩包下载
+function zipDown() {
+    $.ajax({
+        type: "post",
+        url: "/file/zipDown",
+        async: true,
+        success: function () {
+            alert("-----------------zip");
+        },
+        error: function () {
+            alert("====================zip");
+        }
+    })
+}

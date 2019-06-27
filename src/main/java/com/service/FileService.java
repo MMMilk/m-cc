@@ -6,9 +6,9 @@ import com.utils.CommonUtil;
 import com.view.FileInfoView;
 import org.apache.poi.hssf.usermodel.*;
 import org.jooq.DSLContext;
+import org.jooq.util.derby.sys.Sys;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -16,6 +16,8 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.*;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipOutputStream;
 
 import static com.db.tables.MFiles.M_FILES;
 
@@ -66,7 +68,7 @@ public class FileService {
 
 
     //下载excel文档
-    public void  downLoad(){
+    public void  downLoadExcel(){
         File file = new File("milkExcel.xls");
         HSSFWorkbook hssfWorkbook = new HSSFWorkbook();
         //创建一个sheet
@@ -89,6 +91,34 @@ public class FileService {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+
+    public void downloadZip(){
+        File file = new File("milk_zip.zip");
+        File file1 = new File("D:\\pic\\20190626\\20190626162845\\2.jpg");
+        if(file1.exists()){
+            System.out.println("12-381283183-21");
+        }
+        try {
+            FileOutputStream fileOutputStream = new FileOutputStream(file);
+            ZipOutputStream zipOutputStream = new ZipOutputStream(fileOutputStream);
+            FileInputStream fileInputStream = new FileInputStream(file1);
+            zipOutputStream.putNextEntry(new ZipEntry("2.jpg"));
+            int temp = 0;
+            while ((temp = fileInputStream.read()) != -1) {
+                zipOutputStream.write(temp);
+            }
+
+
+            fileInputStream.close();
+            zipOutputStream.close();
+            fileOutputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("==========");
 
     }
 
